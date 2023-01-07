@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{ title }}</h2>
+      <button @click="reverseTitle">Inverser</button>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          title: "Hello World!",
+        },
+        methods: {
+          reverseTitle: function () {
+            this.title = this.title.split("").reverse().join("");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
